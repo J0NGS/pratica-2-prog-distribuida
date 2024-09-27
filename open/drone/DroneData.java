@@ -21,15 +21,15 @@ public class DroneData implements Serializable {
 
     @Override
     public String toString() {
-        return "------------------------------------------------------" +
+        return "------------------------------------------------------ \n" +
                 "-> Drone name: " + droneName + "\n" +
-                "------------------------------------------------------" +
+                "------------------------------------------------------ \n" +
                "Date and Time: " + dateTime + "\n" +
                "Pressure: " + pressure + " hPa\n" +
                "Solar Radiation: " + solarRadiation + " W/m²\n" +
                "Temperature: " + temperature + " °C\n" +
                "Humidity: " + humidity + " %\n" +
-               "------------------------------------------------------";
+               "------------------------------------------------------ \n";
     }
 
 
