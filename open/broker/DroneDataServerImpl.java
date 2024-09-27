@@ -1,4 +1,4 @@
-package Drone;
+package open.broker;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Deque;
@@ -7,6 +7,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.ConcurrentMap;
 import java.util.stream.Collectors;
+
+import open.drone.DroneData;
 
 public class DroneDataServerImpl extends UnicastRemoteObject implements DroneDataServer {
     private ConcurrentMap<String, Deque<DroneData>> dataStore;
@@ -47,7 +49,7 @@ public class DroneDataServerImpl extends UnicastRemoteObject implements DroneDat
             throw new RemoteException("Consumer not registered: " + consumerName);
         }
         List<DroneData> newData = queue.stream().collect(Collectors.toList());
-        queue.clear();
+        queue.clear(); //Limpando a fila do consumer após ele receber os dados
         return newData;
     }
 }

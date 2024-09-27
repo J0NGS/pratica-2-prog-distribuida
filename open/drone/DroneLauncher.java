@@ -1,8 +1,8 @@
+package open.drone;
 import java.rmi.Naming;
 import java.util.Scanner;
 
-import Drone.Drone;
-import Drone.DroneDataServer;
+import open.broker.DroneDataServer;
 
 public class DroneLauncher {
     public static void main(String[] args) {

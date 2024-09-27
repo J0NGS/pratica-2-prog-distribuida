@@ -1,7 +1,9 @@
-package Drone;
+package open.broker;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.List;
+
+import open.drone.DroneData;
 
 public interface DroneDataServer extends Remote {
     void sendData(DroneData data) throws RemoteException;

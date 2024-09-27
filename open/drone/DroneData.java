@@ -1,7 +1,8 @@
-package Drone;
+package open.drone;
 import java.io.Serializable;
 
 public class DroneData implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String droneName;
     private String dateTime;
     private String pressure;
@@ -20,7 +21,9 @@ public class DroneData implements Serializable {
 
     @Override
     public String toString() {
-        return "Drone name: " + droneName + "\n" +
+        return "------------------------------------------------------" +
+                "-> Drone name: " + droneName + "\n" +
+                "------------------------------------------------------" +
                "Date and Time: " + dateTime + "\n" +
                "Pressure: " + pressure + " hPa\n" +
                "Solar Radiation: " + solarRadiation + " W/m²\n" +

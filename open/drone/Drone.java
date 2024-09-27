@@ -1,9 +1,11 @@
-package Drone;
+package open.drone;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
+
+import open.broker.DroneDataServer;
 
 public class Drone implements Runnable {
     private DroneDataServer server;

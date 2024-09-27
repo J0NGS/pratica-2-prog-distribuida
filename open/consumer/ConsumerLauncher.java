@@ -1,7 +1,8 @@
+package open.consumer;
 import java.rmi.Naming;
 import java.util.Scanner;
 
-import Drone.DroneDataServer;
+import open.broker.DroneDataServer;
 
 public class ConsumerLauncher {
     public static void main(String[] args) {

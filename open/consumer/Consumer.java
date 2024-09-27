@@ -1,9 +1,10 @@
+package open.consumer;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.util.List;
 
-import Drone.DroneData;
-import Drone.DroneDataServer;
+import open.broker.DroneDataServer;
+import open.drone.DroneData;
 
 public class Consumer implements Runnable {
     private DroneDataServer server;
