@@ -1,6 +1,8 @@
 import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
 
+import Drone.DroneDataServerImpl;
+
 public class DroneDataServerMain {
     public static void main(String[] args) {
         try {

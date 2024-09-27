@@ -1,10 +1,9 @@
 import java.rmi.Naming;
 import java.util.Scanner;
 
-import Drone.Drone;
 import Drone.DroneDataServer;
 
-public class DroneLauncher {
+public class ConsumerLauncher {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         DroneDataServer server = null;
@@ -19,14 +18,13 @@ public class DroneLauncher {
             }
         }
 
-        System.out.print("Digite o nome do drone: ");
-        String droneName = scanner.nextLine();
+        System.out.print("Digite o nome do consumidor: ");
+        String consumerName = scanner.nextLine();
 
         try {
-            server.registerDrone(droneName);
-            Drone drone = new Drone(server, droneName);
-            Thread droneThread = new Thread(drone);
-            droneThread.start();
+            Consumer consumer = new Consumer(server, consumerName);
+            Thread consumerThread = new Thread(consumer);
+            consumerThread.start();
         } catch (Exception e) {
             e.printStackTrace();
         }
